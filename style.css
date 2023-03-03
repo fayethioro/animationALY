@@ -1,0 +1,114 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: rgb(50, 47, 47);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container
+{
+    background: white;
+    width: 97%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+.box1
+{
+    background: rgb(50, 47, 47);
+    width: 100%;
+    height: 120px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+.rectangle
+{
+   border-top: dotted 15px white ;
+   width: 100%;
+   position: relative;
+   margin-left: 50px;
+   z-index: 120;
+}
+.pac-man
+{
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: -50px;
+    left: -25px;
+    background-color: yellow;
+    border-radius: 50%;
+    /* animation: courir 6s ease-in infinite ; */
+    z-index: -17;
+}
+.triangle{
+    width  : 100%;
+    height :100%;
+    clip-path: polygon(41% 52%, 100% 69%, 100% 11%);
+    background: rgb(50, 47, 47);
+    /* animation: path .9s ease-out infinite ; */
+    z-index: 111;
+
+  }
+.monstre
+{
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    background-color: blueviolet;
+    top: -50px;
+    left: 80px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    
+}
+
+.monstre::after
+{
+    content: "";
+    height: 20px;
+    width: 90px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(226, 43, 95);
+    
+}
+
+  @keyframes path 
+{
+     0%
+     {
+        clip-path: polygon(41% 52%, 100% 56%, 100% 43%);
+     }
+     50%
+     {
+        clip-path: polygon(41% 52%, 100% 57%, 100% 39%);
+     }
+     100%
+     {
+        clip-path: polygon(41% 52%, 100% 69%, 100% 11%);
+     }
+  }
+
+  @keyframes courir {
+    from
+    {
+        transform: translateX(0);
+    }
+    to 
+    {
+        transform: translateX(100vw);
+    }
+    
+  }
+
+  
