@@ -18,6 +18,7 @@ body
     width: 97%;
     height: 700px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 .box1
@@ -36,7 +37,7 @@ body
    width: 100%;
    position: relative;
    margin-left: 50px;
-   z-index: 120;
+   /* z-index: 120; */
 }
 .pac-man
 {
@@ -48,7 +49,7 @@ body
     background-color: yellow;
     border-radius: 50%;
     animation: courir 6s linear infinite  ;
-    z-index: -17;
+    /* z-index: -17; */
 }
 .triangle{
     width  : 100%;
@@ -56,7 +57,7 @@ body
     clip-path: polygon(41% 52%, 100% 69%, 100% 11%);
     background: rgb(50, 47, 47);
      animation: path .5s linear infinite  alternate;
-    /* z-index: 111;  */
+    /* z-index: -12;  */
 
   }
 .monstre
@@ -200,4 +201,80 @@ body
     
   }
 
-  
+.stickers
+{
+    height: 500px;
+    width: 100%;
+    border: solid 1px blue;
+     margin: 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+.emoji
+{
+     height: 200px;
+      width: 200px;
+     margin: 20px;
+     border-radius: 50%;
+     box-shadow: inset 0px 0px 10px  rgb(92, 62, 5);
+ background: linear-gradient( rgb(255, 251, 0) , orange)
+}
+.un , .deux
+{
+    display: flex;
+   
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+}
+.yeux 
+{
+    height: 100px;
+      width: 150px;
+     margin: 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.cercle
+{
+      height: 50px;
+      width: 50px;
+     /* margin: 20px; */
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     box-shadow: inset 0px 0px 10px ;
+     background: linear-gradient( rgb(241, 241, 237) , rgb(226, 224, 221))
+
+}
+.petit-cercle
+{
+    height: 20px;
+    width: 20px;
+   border-radius: 50%;
+   background: black;
+}
+.bouche
+{
+    height: 10px;
+    width: 40px;
+    background:rgb(232, 154, 8) ;
+    box-shadow: inset 0px 0px 10px ;
+   /* border: groove 1px rgb(111, 75, 9); */
+   border-radius: 10px;
+}
+.deux .cercle
+{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.deux .bouche
+{
+    height: 40px;
+    width: 80px;
+    border-radius: 50%;
+}
