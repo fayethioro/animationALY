@@ -28,6 +28,7 @@ body
     margin: 20px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 .rectangle
 {
@@ -46,7 +47,7 @@ body
     left: -25px;
     background-color: yellow;
     border-radius: 50%;
-    /* animation: courir 6s ease-in infinite ; */
+    animation: courir 6s linear infinite  ;
     z-index: -17;
 }
 .triangle{
@@ -54,8 +55,8 @@ body
     height :100%;
     clip-path: polygon(41% 52%, 100% 69%, 100% 11%);
     background: rgb(50, 47, 47);
-    /* animation: path .9s ease-out infinite ; */
-    z-index: 111;
+     animation: path .5s linear infinite  alternate;
+    /* z-index: 111;  */
 
   }
 .monstre
@@ -63,26 +64,91 @@ body
     height: 90px;
     width: 90px;
     position: absolute;
-    background-color: blueviolet;
+    background-color: #9c2102;
     top: -50px;
     left: 80px;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
+    background: 
+            linear-gradient(-35deg, transparent 16px, #9c2102 0);
+            background-repeat: repeat-x;
+            background-position: left bottom;
+            background-size: 36px;
+           
+    animation: courir  6s linear infinite, couleur  1s ease-in-out infinite; 
     
 }
 
-.monstre::after
+/* .monstre::after
 {
     content: "";
     height: 20px;
-    width: 90px;
+    width: 95px;
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
-    background-color: rgb(226, 43, 95);
-    
-}
+    background: 
+            linear-gradient(-43deg, transparent 16px, #9c2102 0);
+    linear-gradient(85deg, transparent 16px, rgb(50, 47, 47)  0);
+            background-repeat: repeat-x;
+            background-position: left bottom;
+            background-size: 34px ;
+            /* animation: couleur  1s linear infinite ;
+            animation: couleur  1s linear infinite ; 
+} */
 
+.boule1
+{
+    height: 25px;
+    width: 20px;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    border-radius: 50%;
+    background: white;
+}
+.iris1
+{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    border-radius: 50%;
+    background: blue;
+    animation:shift  .9s linear infinite alternate; 
+}
+.boule2
+{
+    height: 25px;
+    width: 20px;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    border-radius: 50%;
+    background: white;
+}
+.iris2
+{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    border-radius: 50%;
+    background: red;
+    animation:shift  .7s linear infinite alternate-reverse;
+}
+@keyframes shift {
+    from
+    {
+        transform: translateX(100%);
+    }
+    to 
+    {
+        transform: translateX(0);
+    }
+}
   @keyframes path 
 {
      0%
@@ -91,7 +157,11 @@ body
      }
      50%
      {
-        clip-path: polygon(41% 52%, 100% 57%, 100% 39%);
+        clip-path: polygon(41% 52%, 100% 57%, 100% 37%);
+     }
+     75%
+     {
+        clip-path: polygon(41% 52%, 100% 69%, 100% 21%);
      }
      100%
      {
@@ -107,6 +177,25 @@ body
     to 
     {
         transform: translateX(100vw);
+    }
+    
+  }
+  @keyframes couleur {
+    from
+    {
+        background: 
+            linear-gradient(-35deg, transparent 16px, #69037b 0);
+            background-repeat: repeat-x;
+            background-position: left bottom;
+            background-size: 34px ;
+    }
+    to 
+    {
+        background: 
+            linear-gradient(-35deg, transparent 16px, #9c2102 0);
+            background-repeat: repeat-x;
+            background-position: left bottom;
+            background-size: 34px ;
     }
     
   }
