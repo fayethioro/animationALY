@@ -64,14 +64,13 @@ body
 {
     height: 90px;
     width: 90px;
-    position: absolute;
-    background-color: #9c2102;
+    position: absolute; 
     top: -50px;
     left: 80px;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
     background: 
-            linear-gradient(-35deg, transparent 16px, #9c2102 0);
+            linear-gradient(-35deg, transparent 16px, red 0);
             background-repeat: repeat-x;
             background-position: left bottom;
             background-size: 36px;
@@ -218,8 +217,8 @@ body
       width: 200px;
      margin: 20px;
      border-radius: 50%;
-     box-shadow: inset 0px 0px 10px  rgb(92, 62, 5);
- background: linear-gradient( rgb(255, 251, 0) , orange)
+     box-shadow: inset 0px 0px 10px  rgb(15, 14, 12);
+ background: orange;
 }
 .un , .deux
 {
@@ -262,19 +261,120 @@ body
     height: 10px;
     width: 40px;
     background:rgb(232, 154, 8) ;
-    box-shadow: inset 0px 0px 10px ;
+    box-shadow: inset 0px 0px 10px  ;
    /* border: groove 1px rgb(111, 75, 9); */
    border-radius: 10px;
 }
 .deux .cercle
 {
     display: flex;
-     justify-content: center;
      align-items: center;
+     margin-top: 20px;
+     
 }
+/* .deux .cercle .petit-cercle
+{
+    animation:shift  .7s linear infinite alternate-reverse;
+} */
 .deux .bouche
 {
-    height: 40px;
+    height: 70px;
     width: 80px;
-    border-radius: 50%;
+    border-radius:50%;
+    margin-bottom: 30px;
+    border: red;
+    background-color: rgb(185, 108, 53);
+    position: relative;
+    /* overflow: hidden; */
+}
+.cache
+{
+    height: 50px;
+    width: 98px; 
+    border-radius: 50% ;
+    position: absolute;
+    background-color: orange ;
+    top: -25px; 
+    left: -10px;
+}
+.langue
+{
+    height: 50px;
+    width: 30px; 
+    position: absolute;
+    background-color: rgb(255, 0, 85) ;
+    left: 27px;
+    top: 29px;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.trait
+{
+    position: absolute;
+    height: 30px;
+    width: 1px;
+    background-color: orange;
+    left: 15px;
+    box-shadow: inset 0px 0px 10px  ;
+}
+.oeil
+{
+    background-color: rgb(185, 108, 53);
+    height: 22px;
+    width: 40px;
+   border-radius: 50%;
+   position: relative;
+   top: 25px;
+   left: 10px;
+   box-shadow: inset 0px 0px 10px  ;
+}
+.cligne
+{
+    background-color: orange;
+    height: 20px;
+    width: 40px;
+   border-radius: 50%;
+   position: absolute;
+   top: 5px;
+   
+  
+}
+.trois
+{
+    display: flex;
+      
+     justify-content: center;
+     gap: 30px;
+}
+.trois .petit-cercle
+{
+    margin-top:70px ; 
+    box-shadow: inset 0px 0px 10px  ;
+    background-color: orange;
+    height: 25px;
+    width: 20px;
+}
+
+.triste
+{
+    height: 55px;
+    width: 84px;
+    border-radius:50%;
+    margin-bottom: 30px;
+    background-color: rgb(185, 108, 53);
+    position: relative;
+    top: 35px;
+    left: 60px;
+    box-shadow: inset 0px 0px 10px  ;
+    /* overflow: hidden; */
+}
+.triste .cache
+{
+    height: 50px;
+    width: 98px; 
+    border-radius: 50% ;
+    position: absolute;
+    background-color: orange ;
+    top: 6px; 
+    left: -8px;
 }
